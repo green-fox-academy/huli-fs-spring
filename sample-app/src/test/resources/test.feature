@@ -30,14 +30,14 @@ Feature: CcmbrTsts
     When a file, in the local filesystem, is copied from src/copy.txt to copy.txt
     Then there is a file, in the local filesystem, at path: copy.txt
 
-  Scenario: list directory
-    Given a directory, in the local filesystem, at path:listDirectory
-    When the directory conatins:
-      | apple.txt |
-      | fruits.yml|
-    Then the directory at path: listDirectory should contain these items:
-      | apple.txt |
-      | fruits.yml|
+#  Scenario: list directory
+#    Given a directory, in the local filesystem, at path:listDirectory
+#    When the directory conatins:
+#      | apple.txt |
+#      | fruits.yml|
+#    Then the directory at path: listDirectory should contain these items:
+#      | apple.txt |
+#      | fruits.yml|
 
   Scenario: its a directory
     Given a directory, in the local filesystem, at path:itsDir
