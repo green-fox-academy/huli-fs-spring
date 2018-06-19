@@ -1,5 +1,7 @@
 package com.greenfox.hulispring;
 import org.springframework.stereotype.Service;
+
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
@@ -113,8 +115,8 @@ public class LocalFileSystemOperator {
         }
     }
 
-    public static ArrayList<String> listDirectory(String thePath) throws IOException {
-        ArrayList<String> itemList = new ArrayList<>();
+    public static List listDirectory(String thePath) throws IOException {
+        List itemList = new List();
         Files.newDirectoryStream(Paths.get(thePath))
                 .forEach(Path -> itemList.add(Path.toString()));
         return itemList;
